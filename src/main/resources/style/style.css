@@ -1,0 +1,42 @@
+.navigation-bar{
+    -fx-background-color:  linear-gradient(to bottom,#1CB5E0,#000046);
+}
+.log-out-btn{
+    -fx-cursor: hand;
+}
+.log-out-btn:hover{
+    -fx-background-color: #c0392b;
+    -fx-text-fill: #fff;
+}
+.nav-btn{
+    -fx-cursor: hand;
+}
+.nav-btn:hover{
+    -fx-background-color: rgba(0, 0, 70, 0.13);
+}
+.selected-nav-btn{
+    -fx-cursor: hand;
+    -fx-background-color: rgba(255, 255, 255, 0.3);
+}
+.card{
+    -fx-background-color: #fff;
+    -fx-background-radius: 10px;
+}
+.left-pane{
+    -fx-background-color: #B0D8DA;
+    -fx-background-radius: 36px 0 0 36px;
+    -fx-border-radius: 36px 0 0 36px;
+}
+.right-pane{
+    -fx-background-color: #fff;
+    -fx-background-radius: 36px 0 0 36px;
+}
+
+
+/** {*/
+/*    -fx-primary-color: #4059a9;*/
+/*    -fx-secondary-color: #1CB5E0;*/
+/*    -fx-light-grey-color: #d1d1d1;*/
+
+/*    -fx-focus-color: -fx-secondary-color;*/
+/*}*/

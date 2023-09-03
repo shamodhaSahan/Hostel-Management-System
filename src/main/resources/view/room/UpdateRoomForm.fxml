@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hms.controller.room.UpdateRoomFormController">
+   <children>
+      <AnchorPane layoutX="41.0" layoutY="32.0" prefHeight="174.0" prefWidth="159.0">
+         <children>
+            <ImageView fitHeight="139.0" fitWidth="134.0" layoutX="19.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="19.0" AnchorPane.topAnchor="0.0">
+               <image>
+                  <Image url="@../../assets/door-edit-icon.png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+            <Label fx:id="lblRoomTypeId" alignment="CENTER" layoutY="155.0" prefHeight="25.0" prefWidth="159.0" text="RM-001">
+               <font>
+                  <Font name="DejaVu Serif Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <VBox layoutX="257.0" layoutY="78.0" spacing="15.0">
+         <children>
+            <VBox layoutX="10.0" layoutY="318.0" spacing="10.0">
+               <children>
+                  <Label text="TYPE :" />
+                  <JFXComboBox fx:id="cmbType" prefHeight="25.0" prefWidth="371.0" promptText="Type" />
+               </children>
+            </VBox>
+            <VBox layoutX="10.0" layoutY="87.0" spacing="10.0">
+               <children>
+                  <Label text="KEY MONEY :" />
+                  <JFXTextField fx:id="txtKeyMoney" focusTraversable="false" labelFloat="true" onKeyReleased="#txtKeyReleased" />
+               </children>
+            </VBox>
+            <VBox layoutX="10.0" layoutY="164.0" spacing="10.0">
+               <children>
+                  <Label text="QUANTITY :" />
+                  <JFXTextField fx:id="txtQty" focusTraversable="false" onKeyReleased="#txtKeyReleased" />
+               </children>
+            </VBox>
+            <HBox alignment="CENTER" spacing="70.0">
+               <children>
+                  <JFXButton fx:id="btnUpdate" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefWidth="102.0" style="-fx-background-color: #f39c12;" text="Update" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="18.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnDelete" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefWidth="102.0" style="-fx-background-color: #e74c3c;" text="Delete" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="18.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

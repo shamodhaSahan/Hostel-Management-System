@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="629.0" prefWidth="1116.0" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hms.controller.DashboardFormController">
+   <children>
+      <VBox layoutX="697.0" layoutY="37.0" prefHeight="100.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="20.0" />
+      <BarChart fx:id="barChart" layoutX="430.0" layoutY="245.0" prefHeight="379.0" prefWidth="550.0" style="-fx-font-family: Arial Rounded MT Bold;" title="Reservation in the last 30 days" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="242.0">
+         <xAxis>
+            <CategoryAxis prefHeight="35.0" prefWidth="493.0" tickLabelRotation="45.0" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis label="Number of sales" prefHeight="181.0" prefWidth="46.0" side="LEFT" tickLabelGap="5.0" upperBound="50.0" />
+         </yAxis>
+      </BarChart>
+      <HBox alignment="CENTER" fillHeight="false" layoutX="40.0" layoutY="20.0" spacing="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox prefHeight="100.0" prefWidth="200.0" styleClass="card">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <Label contentDisplay="RIGHT" prefWidth="200.0" text="Total Reservation">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <FontAwesomeIconView glyphName="CART_PLUS" size="40" />
+                     </graphic>
+                  </Label>
+                  <Label fx:id="lblTotalReservation" prefWidth="200.0" text="0">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="48.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox prefHeight="100.0" prefWidth="200.0" styleClass="card">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <Label contentDisplay="RIGHT" prefWidth="200.0" text="Non Paid &#10;Reservation          &#10;&#10;" textFill="#bc0000">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <FontAwesomeIconView glyphName="WRENCH" size="40" text="" />
+                     </graphic>
+                  </Label>
+                  <Label fx:id="lblTotalNonPaidReservation" prefWidth="140.0" text="0" textFill="RED">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="48.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox prefHeight="100.0" prefWidth="200.0" styleClass="card">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <Label contentDisplay="RIGHT" prefWidth="240.0" text="Total Students     ">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <FontAwesomeIconView glyphName="USER" size="40" />
+                     </graphic>
+                  </Label>
+                  <Label fx:id="lblTotalStudent" prefHeight="70.0" prefWidth="106.0" text="0">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="48.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <TableView fx:id="tblRoom" focusTraversable="false" prefHeight="200.0">
+              <columns>
+                <TableColumn prefWidth="100.0" text="ROOM TYPE ID" />
+                <TableColumn prefWidth="100.0" text="TYPE" />
+                  <TableColumn prefWidth="100.0" text="KEY MONEY" />
+                  <TableColumn prefWidth="100.0" text="QUANTITY" />
+              </columns>
+            </TableView>
+         </children>
+         <padding>
+            <Insets left="10.0" right="10.0" top="20.0" />
+         </padding>
+      </HBox>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="544.0" layoutY="587.0" text="Number of Day" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

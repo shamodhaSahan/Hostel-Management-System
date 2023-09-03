@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hms.controller.user.UpdateUserFormController">
+   <children>
+      <AnchorPane layoutX="41.0" layoutY="32.0" prefHeight="174.0" prefWidth="159.0">
+         <children>
+            <ImageView fitHeight="139.0" fitWidth="134.0" layoutX="19.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="19.0" AnchorPane.topAnchor="0.0">
+               <image>
+                  <Image url="@../../assets/update_user.png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+            <Label fx:id="lblUserId" alignment="CENTER" layoutY="155.0" prefHeight="25.0" prefWidth="159.0" text="U001">
+               <font>
+                  <Font name="DejaVu Serif Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="btnUpdate" layoutX="334.0" layoutY="377.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="49.0" prefWidth="102.0" style="-fx-background-color: #f39c12;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <VBox layoutX="248.0" layoutY="32.0" spacing="15.0">
+         <children>
+            <VBox layoutX="10.0" layoutY="10.0" spacing="10.0">
+               <children>
+                  <Label text="NAME :" />
+                  <JFXTextField fx:id="txtName" onAction="#txtNameOnAction" onKeyReleased="#txtKeyReleased" prefWidth="371.0" promptText="Ex. Shamodha" />
+               </children>
+            </VBox>
+            <VBox layoutX="10.0" layoutY="164.0" spacing="10.0">
+               <children>
+                  <Label text="CONTACT NO :" />
+                  <JFXTextField fx:id="txtContact" focusTraversable="false" onAction="#txtContactOnAction" onKeyReleased="#txtKeyReleased" prefWidth="371.0" promptText="Ex. 0712345678" />
+               </children>
+            </VBox>
+            <VBox layoutX="10.0" layoutY="77.0" spacing="10.0">
+               <children>
+                  <Label text="EMAIL :" />
+                  <JFXTextField fx:id="txtEmail" focusTraversable="false" onAction="#txtEmailOnAction" onKeyReleased="#txtKeyReleased" prefWidth="371.0" promptText="Ex. shamodha@gmail.com" />
+               </children>
+            </VBox>
+            <VBox layoutX="10.0" layoutY="144.0" spacing="10.0">
+               <children>
+                  <Label text="USER NAME :" />
+                  <JFXTextField fx:id="txtUserName" focusTraversable="false" onAction="#txtUserNameOnAction" onKeyReleased="#txtKeyReleased" prefWidth="371.0" promptText="Ex. shamodha2000" />
+               </children>
+            </VBox>
+            <VBox layoutX="10.0" layoutY="211.0" spacing="10.0">
+               <children>
+                  <Label text="PASSWORD :" />
+                  <JFXTextField fx:id="txtPassword" focusTraversable="false" onAction="#txtPasswordOnAction" onKeyReleased="#txtKeyReleased" prefWidth="371.0" promptText="Ex. Shamodha2000@" />
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <JFXButton fx:id="btnDelete" layoutX="488.0" layoutY="377.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="49.0" prefWidth="102.0" style="-fx-background-color: #e74c3c;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
